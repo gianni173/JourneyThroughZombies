@@ -6,12 +6,12 @@ using UnityEngine.AI;
 public class ZombieAttack : MonoBehaviour
 {
     public GameEvent cameraShakeDirectHit;
-    public SO_FloatVariable shakeStrenght;
-    public SO_StatisticheZombie SO_statZ;
-    public SO_StatisticheCamper SO_statCamper;
-    public SO_GameController gm;
-    public SO_AudioClip clipPlayerColpito;
-    public SO_AudioClip clipCamperColpito;
+    public FloatVariable shakeStrenght;
+    public StatisticheZombie SO_statZ;
+    public StatisticheCamper SO_statCamper;
+    public GameController gm;
+    public AudioClipTemplate clipPlayerColpito;
+    public AudioClipTemplate clipCamperColpito;
     public GameEvent LoseEvent;
     public GameEvent ShakeCamera;
 

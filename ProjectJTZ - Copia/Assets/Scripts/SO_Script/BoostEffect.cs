@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BstEff_", menuName = "BoostEffect")]
-public class SO_BoostEffect : ScriptableObject {
+public class BoostEffect : ScriptableObject {
 
     public GameEvent boostEvent;
 

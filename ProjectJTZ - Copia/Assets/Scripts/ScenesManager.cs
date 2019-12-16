@@ -12,13 +12,13 @@ public class ScenesManager : MonoBehaviour
     public GameObject cameraMain;
     public GameObject player;
     public GameObject camper;
-    public SO_Input SO_input;
+    public Input SO_input;
     public AudioSource[] audioEmittersPausable;
     public GameObject[] gameObjPausable;
     public Image fader;
     public GameObject faderBg;
-    public SO_BoolVariable fuelVar;
-    public SO_IntVariable projCount;
+    public BoolVariable fuelVar;
+    public IntVariable projCount;
 
     [HideInInspector]
     public Dictionary<string, Scene> loadedScenes = new Dictionary<string, Scene>();
@@ -45,7 +45,7 @@ public class ScenesManager : MonoBehaviour
     {
         if (!isChanging)
         {
-            if (Input.GetKeyDown(SO_input.pausa))
+            if (UnityEngine.Input.GetKeyDown(SO_input.pausa))
             {
                 if (!isPaused)
                 {
@@ -66,13 +66,13 @@ public class ScenesManager : MonoBehaviour
                     Resume();
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Alpha1) && currScene > 0)
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha1) && currScene > 0)
             {
                 currScene--;
                 debugging = true;
                 LoadSceneAdd(scenesNamesInOrder[currScene]);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) && currScene < (scenesNamesInOrder.Length - 1))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha2) && currScene < (scenesNamesInOrder.Length - 1))
             {
                 currScene++;
                 debugging = true;

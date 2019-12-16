@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WalkSound : MonoBehaviour
 {
-    public SO_Camminata clip;
+    public Camminata clip;
     AudioSource audioPlayer;
     int i = 0;
 	void Start ()

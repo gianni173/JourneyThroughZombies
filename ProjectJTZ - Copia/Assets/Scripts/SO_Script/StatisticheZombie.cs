@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatisticheZombie", menuName = "StatisticheZombie")]
-public class SO_StatisticheZombie : ScriptableObject
+public class StatisticheZombie : ScriptableObject
 {
     public float hp;
     public float speed;

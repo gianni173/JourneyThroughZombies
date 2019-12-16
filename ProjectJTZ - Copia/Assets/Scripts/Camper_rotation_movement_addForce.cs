@@ -15,16 +15,16 @@ public class Movement : MonoBehaviour {
 	}
     private void Update()
     {
-        speed = Input.GetAxis("Vertical") * acceleration;
+        speed = UnityEngine.Input.GetAxis("Vertical") * acceleration;
 
-        if (Input.GetAxis("Vertical") != 0)
+        if (UnityEngine.Input.GetAxis("Vertical") != 0)
         {
-            if (Input.GetAxis("Horizontal") > 0)
+            if (UnityEngine.Input.GetAxis("Horizontal") > 0)
             {
                 currentTurn = turnAngle * Time.deltaTime;
                 rb.rotation = Quaternion.Euler(rb.transform.eulerAngles + new Vector3(0, currentTurn, 0));
             }
-            if (Input.GetAxis("Horizontal") < 0)
+            if (UnityEngine.Input.GetAxis("Horizontal") < 0)
             {
                 currentTurn = turnAngle * Time.deltaTime;
                 rb.rotation = Quaternion.Euler(rb.transform.eulerAngles + new Vector3(0, -currentTurn, 0));
@@ -40,11 +40,11 @@ public class Movement : MonoBehaviour {
     {
         //speed = Input.GetAxis("Vertical") * acceleration;
 
-        if (Input.GetAxis("Vertical") < 0)
+        if (UnityEngine.Input.GetAxis("Vertical") < 0)
         {
             rb.AddRelativeForce(Vector3.left * speed);
         }
-        if (Input.GetAxis("Vertical") > 0)
+        if (UnityEngine.Input.GetAxis("Vertical") > 0)
         {
             rb.AddRelativeForce(Vector3.left * speed);
         }

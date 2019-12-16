@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Mina : MonoBehaviour
 {
-    public SO_GameController gm;
-    public SO_Struttura SO_struttura;
-    public SO_AudioClip clipEsplosioneMina;
+    public GameController gm;
+    public StructureTemplate SO_struttura;
+    public AudioClipTemplate clipEsplosioneMina;
     public GameObject colliderExplo;
 
 

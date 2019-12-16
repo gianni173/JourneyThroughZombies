@@ -10,7 +10,7 @@ public class ZombieSpawner : MonoBehaviour
     public int spawnNumber = 1;
     public int spawnTimes = 10;
     public float TimerSpawner;
-    public SO_IntVariable sceneWinSum;
+    public IntVariable sceneWinSum;
     public GameEvent CheckSumEvent;
 
     [HideInInspector]

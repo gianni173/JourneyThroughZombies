@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class BuildingPreview : MonoBehaviour {
 
-    public SO_InventarioOggetti SO_structList;
-    public SO_GameController SO_GM;
-    public SO_HUDTextsReferences hudRef;
-    public SO_Input SO_input;
+    public InventarioOggetti SO_structList;
+    public GameController SO_GM;
+    public HUDTextsReferences hudRef;
+    public Input SO_input;
     public float distFromPlayer;
     public float rotationSpd = 1;
     public Color placeableColor;
@@ -17,7 +17,7 @@ public class BuildingPreview : MonoBehaviour {
     public GameEvent placedBuildingEvent;
 
     [HideInInspector]
-    public SO_Struttura selectedStruct;
+    public StructureTemplate selectedStruct;
 
     float rotation = 90;
     List<Collider> triggerColliders = new List<Collider>();
@@ -40,16 +40,16 @@ public class BuildingPreview : MonoBehaviour {
         spawned.transform.Rotate(Vector3.right, 90);
         spawned.transform.Rotate(Vector3.forward, rotation);
 
-        if (Input.GetKey(SO_input.ruotaBuildOrario))
+        if (UnityEngine.Input.GetKey(SO_input.ruotaBuildOrario))
             rotation += rotationSpd;
-        if (Input.GetKey(SO_input.ruotaBuildAntiorario))
+        if (UnityEngine.Input.GetKey(SO_input.ruotaBuildAntiorario))
             rotation -= rotationSpd;
 
         //piazza la struttura
-        if(Input.GetKeyDown(SO_input.piazzamento) && placeable)
+        if(UnityEngine.Input.GetKeyDown(SO_input.piazzamento) && placeable)
         {
             PlaceStructure();
-            audioPlayer.PlayOneShot( SO_structList.ListaStruct[index].buildingSound);
+            audioPlayer.PlayOneShot(SO_structList.ListaStruct[index].buildingSound);
             SO_GM.scraps -= SO_structList.ListaStruct[index].scrapsReq;
             SO_GM.food -= SO_structList.ListaStruct[index].foodReq;
             NewStructure();
@@ -57,7 +57,7 @@ public class BuildingPreview : MonoBehaviour {
         }
 
         //scroll tra la lista di oggetti
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (UnityEngine.Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (index < SO_structList.ListaStruct.Count - 1)
                 index++;
@@ -68,7 +68,7 @@ public class BuildingPreview : MonoBehaviour {
             NewStructure();
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (UnityEngine.Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (index > 0)
                 index--;
@@ -171,7 +171,7 @@ public class BuildingPreview : MonoBehaviour {
     {
         if (collision.collider.tag == "TargetStructure")
         {
-            if(Input.GetKeyDown(SO_input.interazione))
+            if(UnityEngine.Input.GetKeyDown(SO_input.interazione))
             {
                 audioPlayer.PlayOneShot(collision.collider.GetComponent<Struttura>().stats.explosionDestruction, collision.collider.GetComponent<Struttura>().stats.volumeDistruzione);
                 Destroy(collision.collider.gameObject);

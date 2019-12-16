@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatistichePlayer", menuName = "StatistichePlayer")]
-public class SO_StatistichePlayer : ScriptableObject {
+public class StatistichePlayer : ScriptableObject {
 
     public float speed;
     public float sprintSpeed;

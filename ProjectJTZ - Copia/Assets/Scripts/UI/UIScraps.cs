@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIScraps : MonoBehaviour {
 
-    public SO_GameController gm;
+    public GameController gm;
 
     void Update()
     {

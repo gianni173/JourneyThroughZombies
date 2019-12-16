@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwitchModeGrndCamp : MonoBehaviour {
 
-    public SO_GameController gm;
+    public GameController gm;
     public GameObject tower;
     public GameObject playerOnCamper;
 

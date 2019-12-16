@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AimToMouseBuilding : MonoBehaviour {
 
-    public SO_Input SO_input;
-    public SO_GameController gm;
+    public Input SO_input;
+    public GameController gm;
 	
 	void Update () {
 
         //rotation
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(UnityEngine.Input.mousePosition.x, UnityEngine.Input.mousePosition.y, UnityEngine.Input.mousePosition.z));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000f))
         {

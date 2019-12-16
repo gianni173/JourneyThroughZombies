@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIOnGatherScraps : MonoBehaviour {
 
-    public SO_IntVariable scrapsReference;
+    public IntVariable scrapsReference;
 
     void Update () {
 

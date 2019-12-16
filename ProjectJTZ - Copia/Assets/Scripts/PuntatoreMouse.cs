@@ -10,7 +10,7 @@ public class PuntatoreMouse : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 CursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 CursorPos = Camera.main.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
         transform.position = CursorPos;
     }
 

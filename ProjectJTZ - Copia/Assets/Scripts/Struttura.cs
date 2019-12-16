@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Struttura : MonoBehaviour {
 
-    public SO_Struttura statsMother;
+    public StructureTemplate statsMother;
 
     [HideInInspector]
-    public SO_Struttura stats;
+    public StructureTemplate stats;
 
     public bool placed = false;
     List<GameObject> attackers;

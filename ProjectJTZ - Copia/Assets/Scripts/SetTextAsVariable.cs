@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SetTextAsVariable : MonoBehaviour
 {
 
-    public SO_IntVariable projectilesLoaded;
+    public IntVariable projectilesLoaded;
 
     private void Update()
     {

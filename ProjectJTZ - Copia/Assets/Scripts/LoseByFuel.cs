@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoseByFuel : MonoBehaviour
 {
 
-    public SO_GameController fuelReference;
+    public GameController fuelReference;
     public GameEvent loseByFuelEvent;
     public GameObject fuelRes;
 

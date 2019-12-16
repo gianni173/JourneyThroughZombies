@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIConsumedScraps : MonoBehaviour
 {
-    public SO_IntVariable scrapsConsumed;
+    public IntVariable scrapsConsumed;
     public GameObject textChild;
 
     public void CallCoroutine()

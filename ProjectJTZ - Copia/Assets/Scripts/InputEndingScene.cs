@@ -10,7 +10,7 @@ public class InputEndingScene : MonoBehaviour
 
 	void Update ()
     {
-        if (Input.GetKeyDown(returnToMenuKey))
+        if (UnityEngine.Input.GetKeyDown(returnToMenuKey))
             SceneManager.LoadScene(menuSceneName);
 	}
 }

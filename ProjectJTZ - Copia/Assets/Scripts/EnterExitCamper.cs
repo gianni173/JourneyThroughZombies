@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnterExitCamper : MonoBehaviour
 {
 
-    public SO_GameController gm;
-    public SO_Input SO_input;
+    public GameController gm;
+    public Input SO_input;
     public GameEvent SwitchToCombatEvent;
     public GameObject tower;
     public GameObject playerOnCamper;
@@ -31,7 +31,7 @@ public class EnterExitCamper : MonoBehaviour
     {
         if (gm.mode == "ONCAMPER")
         {
-            if (Input.GetKeyDown(SO_input.interazione) && camperScript.acceleration == 0)
+            if (UnityEngine.Input.GetKeyDown(SO_input.interazione) && camperScript.acceleration == 0)
             {
                 rb.constraints = RigidbodyConstraints.FreezeAll;
                 gm.mode = "ONGROUND";
@@ -56,7 +56,7 @@ public class EnterExitCamper : MonoBehaviour
         else if (gm.mode == "ONGROUND")
         {
             //mostra che puoi salire premendo E
-            if (Input.GetKeyDown(SO_input.interazione) && gm.mode == "ONGROUND" && canEnter)
+            if (UnityEngine.Input.GetKeyDown(SO_input.interazione) && gm.mode == "ONGROUND" && canEnter)
             {
                 rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
                 gm.mode = "ONCAMPER";

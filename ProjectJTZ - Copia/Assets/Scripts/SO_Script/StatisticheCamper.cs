@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatisticheCamper", menuName = "StatisticheCamper")]
-public class SO_StatisticheCamper : ScriptableObject {
+public class StatisticheCamper : ScriptableObject {
 
     public float powerAccelerazione;
     public float maxSpeed;

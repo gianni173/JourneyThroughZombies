@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatisticheShooting", menuName = "StatisticheShooting")]
-public class SO_StatisticheShooting : ScriptableObject {
+public class StatisticheShooting : ScriptableObject {
 
     public GameObject proiettile;
     public float horizOffsetShot;

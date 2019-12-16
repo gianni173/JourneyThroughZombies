@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnterExitBuildingMode : MonoBehaviour{
 
-    public SO_GameController gm;
-    public SO_Input SO_input;
+    public GameController gm;
+    public Input SO_input;
     public GameEvent SO_switchToBuilding;
     public GameEvent SO_switchToCombat;
     //Animator anim;
@@ -16,7 +16,7 @@ public class EnterExitBuildingMode : MonoBehaviour{
         {
             if (gm.playerMode == "COMBAT")
             {
-                if (Input.GetKeyDown(SO_input.switchSparoBuilding))
+                if (UnityEngine.Input.GetKeyDown(SO_input.switchSparoBuilding))
                 {
                     SO_switchToBuilding.Raise();
                     gm.playerMode = "BUILDING";
@@ -25,7 +25,7 @@ public class EnterExitBuildingMode : MonoBehaviour{
             }
             else if (gm.playerMode == "BUILDING")
             {
-                if (Input.GetKeyDown(SO_input.switchSparoBuilding))
+                if (UnityEngine.Input.GetKeyDown(SO_input.switchSparoBuilding))
                 {
                     SO_switchToCombat.Raise();
                     gm.playerMode = "COMBAT";

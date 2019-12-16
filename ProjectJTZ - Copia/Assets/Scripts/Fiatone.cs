@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fiatone : MonoBehaviour
 {
-    public SO_StatistichePlayer stat_player;
+    public StatistichePlayer stat_player;
 
     AudioSource audioPlayer;
     float maxVolume;

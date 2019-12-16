@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnim : MonoBehaviour
 {
     public GameObject gambe;
-    public SO_StatistichePlayer SO_statPlayer;
+    public StatistichePlayer SO_statPlayer;
     Animator anim;
     Animator animGambe;
     public float TimerMorte;
@@ -18,19 +18,19 @@ public class PlayerAnim : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.W) /*&& transform.position.z < mapHeight/2*/)
+        if (UnityEngine.Input.GetKey(KeyCode.W) /*&& transform.position.z < mapHeight/2*/)
         {
             animGambe.SetBool("walk", true);
         }
-        else if (Input.GetKey(KeyCode.S) /*&& transform.position.z > -(mapHeight / 2)*/)
+        else if (UnityEngine.Input.GetKey(KeyCode.S) /*&& transform.position.z > -(mapHeight / 2)*/)
         {
             animGambe.SetBool("walk", true);
         }
-        else if (Input.GetKey(KeyCode.D) /*&& transform.position.x < mapWidth / 2*/)
+        else if (UnityEngine.Input.GetKey(KeyCode.D) /*&& transform.position.x < mapWidth / 2*/)
         {
             animGambe.SetBool("walk", true);
         }
-        else if (Input.GetKey(KeyCode.A)/* && transform.position.x > -(mapWidth / 2)*/)
+        else if (UnityEngine.Input.GetKey(KeyCode.A)/* && transform.position.x > -(mapWidth / 2)*/)
         {
             animGambe.SetBool("walk", true);
         }

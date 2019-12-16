@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Healt_Camper : MonoBehaviour
 {
     private float MaxHealth { get; set; }
-    public SO_GameController gm;
-    public SO_GameController gmValues;
+    public GameController gm;
+    public GameController gmValues;
     public Slider healthBar;
     GameObject camperHull;
 

@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class ZombieMovement : MonoBehaviour
 {
 
-    public SO_GameController SO_gameController;
-    public SO_StatisticheZombie SO_statZ;
+    public GameController SO_gameController;
+    public StatisticheZombie SO_statZ;
 
     [HideInInspector]
     public GameObject target;

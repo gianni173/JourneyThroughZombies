@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class DebugInputs : MonoBehaviour {
 
     GameObject[] allSpawners;
-    public SO_GameController gm;
-    public SO_GameController gmValues;
-    public SO_Input SO_input;
+    public GameController gm;
+    public GameController gmValues;
+    public Input SO_input;
 
     public float percScraps = 100;
     public float percFood = 100;
@@ -26,7 +26,7 @@ public class DebugInputs : MonoBehaviour {
 
     void Update () {
 
-        if (Input.GetKeyDown(SO_input.debugSpawnZombieWave))
+        if (UnityEngine.Input.GetKeyDown(SO_input.debugSpawnZombieWave))
         {
             foreach (GameObject go in allSpawners)
             {
@@ -34,12 +34,12 @@ public class DebugInputs : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(SO_input.debugGoToMenu))
+        if (UnityEngine.Input.GetKeyDown(SO_input.debugGoToMenu))
         {
             SceneManager.LoadScene("Menu");
         }
 
-        if (Input.GetKeyDown(SO_input.debugStopStartSpawns))
+        if (UnityEngine.Input.GetKeyDown(SO_input.debugStopStartSpawns))
         {
             if (spawnsStopped == false)
             {
@@ -59,18 +59,18 @@ public class DebugInputs : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(SO_input.debugHealthCheat))
+        if (UnityEngine.Input.GetKey(SO_input.debugHealthCheat))
         {
             gm.camperFuel++;
             gm.playerHp++;
         }
     
-        if (Input.GetKey(SO_input.debugAmmoCheat))
+        if (UnityEngine.Input.GetKey(SO_input.debugAmmoCheat))
         {
             gm.ammo++;
         }
 
-        if (Input.GetKeyDown(SO_input.debugResetGameController))
+        if (UnityEngine.Input.GetKeyDown(SO_input.debugResetGameController))
         {
             ResetGMValues();
         }

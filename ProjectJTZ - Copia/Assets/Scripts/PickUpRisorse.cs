@@ -18,18 +18,18 @@ public class PickUpRisorse : MonoBehaviour
     [HideInInspector]
     public int maxSpawns = 0;
 
-    public SO_IntVariable OnGatherScrapsVar;
-    public SO_IntVariable OnGatherFoodVar;
+    public IntVariable OnGatherScrapsVar;
+    public IntVariable OnGatherFoodVar;
     public GameEvent OnGatherScrapsEvent;
     public GameEvent OnGatherFoodEvent;
     public GameObject pickUpTextPrefab;
-    public SO_GameController SO_gm;
+    public GameController SO_gm;
     public Risorsa risorsa = Risorsa.Scrap;
-    public SO_AudioClip clipScraps;
-    public SO_AudioClip clipMeat;
-    public SO_AudioClip clipFuel;
+    public AudioClipTemplate clipScraps;
+    public AudioClipTemplate clipMeat;
+    public AudioClipTemplate clipFuel;
     public GameEvent tutorialEndEvent;
-    public SO_BoolVariable tutorialTrigger;
+    public BoolVariable tutorialTrigger;
 
     AudioSource audioPlayer;
 

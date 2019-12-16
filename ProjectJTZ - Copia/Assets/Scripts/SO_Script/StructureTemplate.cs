@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Str_", menuName = "Struttura")]
-public class SO_Struttura : ScriptableObject {
+public class StructureTemplate : ScriptableObject {
 
     public string buildingName;
     public int scrapsReq;
@@ -20,7 +20,7 @@ public class SO_Struttura : ScriptableObject {
     public float damageTimerInSec; //ogni quanto fa danno (filo spinato)
     public float damage; //danno
 
-    public void CopyValues(SO_Struttura copyFrom, SO_Struttura copyTo)
+    public void CopyValues(StructureTemplate copyFrom, StructureTemplate copyTo)
     {
         copyTo.buildingName = copyFrom.buildingName;
         copyTo.scrapsReq = copyFrom.scrapsReq;

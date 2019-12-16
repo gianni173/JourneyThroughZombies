@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class AimToMouse : MonoBehaviour
 {
-    public SO_GameController gm;
-    public SO_StatisticheShooting SO_stat;
-    public SO_Input SO_input;
-    public SO_IntVariable proiettiliSO;
-    public SO_AudioClip clipPistola;
-    public SO_AudioClip clipTorretta;
+    public GameController gm;
+    public StatisticheShooting SO_stat;
+    public Input SO_input;
+    public IntVariable proiettiliSO;
+    public AudioClipTemplate clipPistola;
+    public AudioClipTemplate clipTorretta;
 
     AudioSource audioPlayer;
     Animator tor;
@@ -31,7 +31,7 @@ public class AimToMouse : MonoBehaviour
         t += Time.deltaTime;
 
         //rotation
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(UnityEngine.Input.mousePosition.x, UnityEngine.Input.mousePosition.y, UnityEngine.Input.mousePosition.z));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000f))
         {
@@ -46,14 +46,14 @@ public class AimToMouse : MonoBehaviour
             //print(hit.point.x + " " + transform.position.y + " " + hit.point.z);
         }
         //shoot
-        if (Input.GetKey(SO_input.sparo) && ((gameObject.tag == "Player" || gm.ammo > 0)) && t > SO_stat.fireRate)
+        if (UnityEngine.Input.GetKey(SO_input.sparo) && ((gameObject.tag == "Player" || gm.ammo > 0)) && t > SO_stat.fireRate)
         {
             GameObject spawned;
             t = 0;
             //sul camper
             if (gameObject.tag == "Camper")
             {
-                audioPlayer.PlayOneShot(clipTorretta.audio, clipTorretta.volumeAudio);
+                audioPlayer?.PlayOneShot(clipTorretta.audio, clipTorretta.volumeAudio);
                 gm.ammo--;
                 spawned = Instantiate(SO_stat.proiettile, transform.position + transform.right * -SO_stat.verticalOffsetShot + transform.forward * -SO_stat.horizOffsetShot, transform.rotation);
                 spawned.transform.Rotate(Vector3.up, -90);

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PrintArrow : MonoBehaviour
 {
-    public SO_GameController gm;
-    public SO_Input SO_input;
+    public GameController gm;
+    public Input SO_input;
     public GameObject arrow;
     public float timer;
     bool pressed = false;
@@ -18,18 +18,18 @@ public class PrintArrow : MonoBehaviour
 
     void Update()
     {
-            if (Input.GetKey(SO_input.puntatoreCamper) && gm.mode == "ONGROUND")
+            if (UnityEngine.Input.GetKey(SO_input.puntatoreCamper) && gm.mode == "ONGROUND")
             {
             pressed = true;
                 if (pressed)
                 {
-                    StartCoroutine(CountDown());
+                StartCoroutine(CountDown());
                 }
             }
             else if (gm.mode == "ONCAMPER")
             {
 
-                arrow.SetActive(false);
+            arrow.SetActive(false);
             }
     }
     IEnumerator CountDown()

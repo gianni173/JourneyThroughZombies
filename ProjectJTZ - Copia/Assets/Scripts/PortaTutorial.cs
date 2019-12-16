@@ -9,7 +9,7 @@ public class PortaTutorial : MonoBehaviour
     bool canOpen = false;
     int i = 0;
 
-    public SO_Input so_Input;
+    public Input so_Input;
     public List<Sprite> door = new List<Sprite>();
     public GameObject figlioPorta;
     public AudioClip apri;
@@ -27,7 +27,7 @@ public class PortaTutorial : MonoBehaviour
 	}
     private void Update()
     {
-        if (Input.GetKeyDown(so_Input.interazione) && canOpen)
+        if (UnityEngine.Input.GetKeyDown(so_Input.interazione) && canOpen)
         {
             if (i == 0)
             {

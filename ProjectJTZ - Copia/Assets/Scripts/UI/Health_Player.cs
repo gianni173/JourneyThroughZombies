@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Health_Player : MonoBehaviour {
 
     public float MaxHealth { get; set; }
-    public SO_GameController gm;
-    public SO_GameController gmValues;
+    public GameController gm;
+    public GameController gmValues;
     public Slider healthBar;
 
 	void Start ()

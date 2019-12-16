@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIStrScrapsReq : MonoBehaviour {
 
-    public SO_HUDTextsReferences hudRef;
+    public HUDTextsReferences hudRef;
 
     void Update () {
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIOnGatherFood : MonoBehaviour {
 
-    public SO_IntVariable foodReference;
+    public IntVariable foodReference;
 
     void Update () {
 

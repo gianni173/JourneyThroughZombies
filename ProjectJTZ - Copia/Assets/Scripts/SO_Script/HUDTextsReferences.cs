@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "HUDTextsReferences", menuName = "SO_HUDTextsReferences")]
-public class SO_HUDTextsReferences : ScriptableObject
+public class HUDTextsReferences : ScriptableObject
 {
 
     public int scrapsReq = 0;

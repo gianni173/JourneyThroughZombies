@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieStats : MonoBehaviour
 {
-    public SO_StatisticheZombie SO_statZ;
+    public StatisticheZombie SO_statZ;
     public GameObject ammoPack;
     bool droppato = false;
 

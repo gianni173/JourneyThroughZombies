@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movimento : MonoBehaviour {
-    public SO_StatistichePlayer SO_statPlayer;
-    public SO_Input SO_input;
+public class Movimento : MonoBehaviour
+{
+
+    public StatistichePlayer SO_statPlayer;
+    public Input SO_input;
     public Sprite shootingSprite;
-    //public float mapHeight = 20f;
-    //public float mapWidth = 20f;
-    Rigidbody rb;
-    float speed = 0;
-    float maxStamina = 0;
+
+    private Rigidbody rb;
+    private float speed = 0;
+    private float maxStamina = 0;
 
 
     private void Start()
@@ -21,7 +22,7 @@ public class Movimento : MonoBehaviour {
     }
     void Update()
     {
-        if (Input.GetKey(SO_input.sprint))
+        if (UnityEngine.Input.GetKey(SO_input.sprint))
         {
             if (SO_statPlayer.stamina > 0)
             {
@@ -47,22 +48,21 @@ public class Movimento : MonoBehaviour {
 
         Vector3 move = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W) /*&& transform.position.z < mapHeight/2*/)
+        if (UnityEngine.Input.GetKey(KeyCode.W))
         {
-            move += new Vector3(0,0,1);
+            move += Vector3.forward;
         }
-        if (Input.GetKey(KeyCode.S) /*&& transform.position.z > -(mapHeight / 2)*/)
+        if (UnityEngine.Input.GetKey(KeyCode.S))
         {
-            move += new Vector3(0, 0, -1);
+            move += Vector3.back;
         }
-        if (Input.GetKey(KeyCode.D) /*&& transform.position.x < mapWidth / 2*/)
+        if (UnityEngine.Input.GetKey(KeyCode.D))
         {
-            move += new Vector3(1, 0, 0);
+            move += Vector3.right;
         }
-        if (Input.GetKey(KeyCode.A)/* && transform.position.x > -(mapWidth / 2)*/)
+        if (UnityEngine.Input.GetKey(KeyCode.A))
         {
-            move += new Vector3(-1, 0, 0);
-
+            move += Vector3.left;
         }
 
         rb.velocity += move.normalized * speed;
@@ -73,4 +73,5 @@ public class Movimento : MonoBehaviour {
     {
         GetComponent<SpriteRenderer>().sprite = shootingSprite;
     }
+
 }

@@ -7,7 +7,7 @@ public class BoostsEventsResponses : MonoBehaviour {
     public GameEvent ConsumeResEvent;
     public float healPanino = 10;
     public GameObject esca;
-    public SO_GameController SO_gameManager;
+    public GameController SO_gameManager;
     public GameEvent tutorialFullHealth;
 
     bool tutorialFirstFull = true;

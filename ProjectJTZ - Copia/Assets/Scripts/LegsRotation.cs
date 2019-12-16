@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LegsRotation : MonoBehaviour {
 
-    public SO_GameController SO_gameController;
+    public GameController SO_gameController;
 
     SpriteRenderer legRenderer;
     int horiz = 0;
@@ -22,10 +22,10 @@ public class LegsRotation : MonoBehaviour {
             horiz = 0;
             vert = 0;
 
-            if (Input.GetKey(KeyCode.A)) horiz -= 1;
-            if (Input.GetKey(KeyCode.D)) horiz += 1;
-            if (Input.GetKey(KeyCode.S)) vert -= 1;
-            if (Input.GetKey(KeyCode.W)) vert += 1;
+            if (UnityEngine.Input.GetKey(KeyCode.A)) horiz -= 1;
+            if (UnityEngine.Input.GetKey(KeyCode.D)) horiz += 1;
+            if (UnityEngine.Input.GetKey(KeyCode.S)) vert -= 1;
+            if (UnityEngine.Input.GetKey(KeyCode.W)) vert += 1;
 
             if (horiz == 0 && vert == 0)
                 legRenderer.enabled = false;

@@ -11,8 +11,8 @@ public class CameraController : MonoBehaviour
     Vector3 targetPos;
     Vector3 shakeOffset = Vector3.zero;
     Vector3 midVector;
-    public SO_FloatVariable shakeStrenght;
-    public SO_GameController gm;
+    public FloatVariable shakeStrenght;
+    public GameController gm;
     public float cameraDistanceFromPlayer = 0.2f;
     public float cameraSpeed = 0.1f;
     public float shakeTime = 2;
@@ -33,7 +33,7 @@ public class CameraController : MonoBehaviour
     {
         if (!cinemating)
         {
-            Ray ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+            Ray ray = Camera.main.ScreenPointToRay(new Vector3(UnityEngine.Input.mousePosition.x, UnityEngine.Input.mousePosition.y, UnityEngine.Input.mousePosition.z));
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 1000f))
             {

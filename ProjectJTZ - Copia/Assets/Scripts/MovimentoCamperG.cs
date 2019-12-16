@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MovimentoCamperG : MonoBehaviour {
 
-    public SO_StatisticheCamper SO_StatCamper;
+    public StatisticheCamper SO_StatCamper;
     public Rigidbody rb;
-    public SO_GameController gm;
+    public GameController gm;
     public GameObject[] RotatingWheels;
     public float volumeArrotato;
     public float speedNecessariaCrashBarricate = 2;
@@ -43,15 +43,15 @@ public class MovimentoCamperG : MonoBehaviour {
 
         if (gm.camperFuel > 0)
         {
-            if (Input.GetKey(KeyCode.W) && acceleration < SO_StatCamper.maxSpeed)
+            if (UnityEngine.Input.GetKey(KeyCode.W) && acceleration < SO_StatCamper.maxSpeed)
                 acceleration += SO_StatCamper.powerAccelerazione;
-            if (Input.GetKey(KeyCode.S) && acceleration > -(SO_StatCamper.maxSpeed / 3) * 2)
+            if (UnityEngine.Input.GetKey(KeyCode.S) && acceleration > -(SO_StatCamper.maxSpeed / 3) * 2)
                 acceleration -= SO_StatCamper.powerAccelerazione;
         }
 
         if (gm.camperFuel <= 0)
         {
-            if ((Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.S))))
+            if ((UnityEngine.Input.GetKey(KeyCode.W) || (UnityEngine.Input.GetKey(KeyCode.S))))
             {
                 if(!tutorialTrigger)
                 {
@@ -61,9 +61,9 @@ public class MovimentoCamperG : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.D) && wheelsRot < SO_StatCamper.maxWheelsRot)
+        if (UnityEngine.Input.GetKey(KeyCode.D) && wheelsRot < SO_StatCamper.maxWheelsRot)
             wheelsRot += SO_StatCamper.wheelsRotSpd;
-        if (Input.GetKey(KeyCode.A) && wheelsRot > -SO_StatCamper.maxWheelsRot)
+        if (UnityEngine.Input.GetKey(KeyCode.A) && wheelsRot > -SO_StatCamper.maxWheelsRot)
             wheelsRot -= SO_StatCamper.wheelsRotSpd;
 
         if (wheelsRot < SO_StatCamper.wheelsRotSpd / 2 && wheelsRot > -SO_StatCamper.wheelsRotSpd / 2)

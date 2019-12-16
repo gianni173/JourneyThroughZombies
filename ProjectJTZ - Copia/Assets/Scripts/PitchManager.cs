@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PitchManager : MonoBehaviour
 {
-    public SO_StatisticheCamper SO_statisticheCamper;
+    public StatisticheCamper SO_statisticheCamper;
     public GameObject camper;
     public float minPitch = 0.8f;
     public float maxPitch = 1.5f;

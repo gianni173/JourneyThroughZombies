@@ -7,9 +7,9 @@ public class EsplosioneProiettile : MonoBehaviour
 
     AudioSource audioPlayer;
 
-    public SO_GameController gm;
+    public GameController gm;
     public float aoeDamage = 1;
-    public SO_AudioClip clipExplosionGranade;
+    public AudioClipTemplate clipExplosionGranade;
     public GameObject aoeExplosion;
     public float volumeEsplosione;
 

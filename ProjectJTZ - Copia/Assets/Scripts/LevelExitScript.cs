@@ -10,7 +10,7 @@ public class LevelExitScript : MonoBehaviour {
         PREVIOUS,
     }
 
-    public SO_GameController SO_gameController;
+    public GameController SO_gameController;
     public Level goingTo___Map = Level.NEXT;
     public Vector3 nextLevelCoordinates = new Vector3(0, 0.1f, 0);
     public float nextLevelRotationY = 0;

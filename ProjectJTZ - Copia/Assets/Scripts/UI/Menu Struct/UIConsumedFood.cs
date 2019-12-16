@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIConsumedFood : MonoBehaviour
 {
-    public SO_IntVariable foodConsumed;
+    public IntVariable foodConsumed;
     public GameObject textChild;
 
     public void CallCoroutine()

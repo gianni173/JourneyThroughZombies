@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneWinEvent : MonoBehaviour
 {
     public SceneWinChecker script;
-    public SO_IntVariable sum;
+    public IntVariable sum;
     public int allSpawnsPossible;
 
     private void OnEnable()

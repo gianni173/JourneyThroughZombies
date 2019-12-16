@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIOnGatherAmmo : MonoBehaviour {
 
-    public SO_IntVariable ammoReference;
+    public IntVariable ammoReference;
 
     void Update () {
 

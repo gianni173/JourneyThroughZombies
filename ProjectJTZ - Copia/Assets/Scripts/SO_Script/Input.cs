@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [CreateAssetMenu(fileName = "Input", menuName = "InputPersonalizzati")]
-public class SO_Input : ScriptableObject {
+public class Input : ScriptableObject {
 
     public KeyCode sparo;
     public KeyCode piazzamento;

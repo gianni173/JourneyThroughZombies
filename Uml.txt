@@ -1,0 +1,224 @@
+@startuml
+
+package Character
+{
+    +class CharacterController<<M, lightgreen>>
+    {
+        +stats : CharacterStats
+        +movement : CharacterMovement
+        +input : CharacterInput
+        +combat : CharacterCombat
+    }
+    
+    +class CharacterMovement<<M, lightgreen>>
+    {
+        +currSpeed : float
+        -controller : CharacterController
+        
+        +Accelerate(dir, amount)
+        +Decelerate(dir, amount)
+        -Move()
+        
+    }
+    
+    +class CharacterInput<<M, lightgreen>>
+    {
+        +isPlayer : bool
+        -CheckPlayerInput()
+        -CheckAIInput()
+    }
+    
+    +class CharacterCombat<<M, lightgreen>>
+    {
+        +lootablePrefab : GameObject
+        +currWeapon : CharacterWeapon
+        +carriedWeapons : List<CharacterWeapon>
+        +lootTable : 
+    }
+    
+    +class CharacterWeapon<<S, red>>
+    {
+        +type : WeaponType
+        +baseDamage : float
+        +range : float
+        
+        +UseWeapon()
+    }
+    
+    note bottom of CharacterController : This is used for Player and Enemies
+    
+    CharacterCombat --* CharacterController
+    CharacterCombat <- CharacterWeapon
+    CharacterInput -* CharacterController
+    CharacterController *- CharacterMovement
+}
+
+package Stats
+{
+    +class CharacterStats<<S, red>>
+    {
+        +maxSpeed : float
+        +acceleration : float
+        +deceleration : float
+        +maxStamina : float
+    }
+    
+    +class VehicleStats<<S,red>>
+    {
+        +maxSpeed : float
+        +acceleration : float
+        +deceleration : float
+        +vehicleDamage : float
+        +damageReduction : float
+        +maxFuel : float
+    }
+    
+    +class TurretStats<<S,red>>
+    {
+        +projectile : GameObject
+        +shootSpeed : GameObject
+        +fireType : FireType
+    }
+}
+
+package Vehicle
+{
+    +class VehicleController<<M,lightgreen>>
+    {
+        +stats : VehicleStats
+        +turret : VehicleTurret
+        +currFuel : float
+        
+        +Accelerate()
+        +Decelerate()
+        -Move()
+    }
+    
+    +class VehicleTurret<<M,lightgreen>>
+    {
+        +rotationSpeed : float
+        +Rotate()
+        +Shoot()
+    }
+
+    note left of VehicleController : This is used for every Vehicle
+
+    VehicleController <- VehicleTurret
+}
+
+package GlobalMap
+{
+    +class MapManager<<M,lightgreen,SingletonDDOL>>
+    {
+        +loadedScenarios : Dictionary<string, Scene>
+        +ChangeScenario(sceneName)
+        -LoadScene(sceneName)
+        -ActivateScene(string)
+        -DeactivateScene(string)
+    }
+    
+    +class Scenario<<M,lightgreen>> 
+    { 
+    
+    }
+    
+    +class Spawner<<M,lightgreen>>
+    {
+        +objectSpawned : GameObject
+        +timeBetweenSpawns : float
+        +numberOfSpawns : int
+        +numberOfObjectsSpawned : int
+    }
+    
+    note right of MapManager : This is used to load, \nactivate and deactivate scenes
+}
+
+package GameManager
+{
+    +class GameController<<M,lightgreen,SingletonDDOL>>
+    {
+        +playerInventory : List<ResSet>
+        +consumablesKnown : List<Consumable>
+    }
+    
+    note right of GameController : This is the Player inventory and\n known consumable recipes
+}
+
+package Loot
+{
+    +class LootableObject<<M, lightgreen,ILootable>>
+    {
+        +inventory : List<ResSet>
+        +Loot()
+    }
+    
+    +class ILootable<<I,lightyellow,Interface>>
+    {
+        +inventory : List<ResSet>
+        +Loot()
+    }
+    
+    +class ResSet<<C,lightblue>>
+    {
+        +res : Resource
+        +amount : int
+    }
+    
+    +class Resource<<S,red>>
+    {
+        +nomenclature : string
+    }
+    
+    LootableObject <- ILootable
+    ILootable <- ResSet
+    ResSet <- Resource
+}
+
+package BuildingSystem
+{
+    +class Structure<<M,lightgreen>>
+    {
+        +stats : StructureStats
+        +currHp : float
+    }
+
+    +class StructureStats<<S,red>>
+    {
+        +maxHp : float
+        +doesAggroZombies : bool
+        +cost : List<ResSet>
+    }
+    
+    Structure -> StructureStats
+}
+
+package Consumables
+{
+    +class Consumable<<S,red>>
+    {
+        +cost : List<ResSet>
+        
+        +Activate()
+    }
+    
+     note right of Consumable : These are the recipe\n and the effect of the instant activables\n (Esca,Panino,Bomba)
+}
+
+GameController <-- Consumable
+
+LootableObject --> GameController
+
+TurretStats -> VehicleTurret
+VehicleStats -> VehicleController
+CharacterController <- CharacterStats
+
+Character -[hidden] GlobalMap
+Character -[hidden]--- Stats
+Character -[hidden]---- Vehicle
+Character -[hidden]----- BuildingSystem
+Stats -[hidden] Loot
+Vehicle -[hidden] GameManager 
+BuildingSystem -[hidden] Consumables
+
+
+@enduml
