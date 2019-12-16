@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1970260694950826}
+  m_IsPrefabParent: 1
+--- !u!1 &1970260694950826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4299951159579932}
+  - component: {fileID: 212113527755424186}
+  - component: {fileID: 114422805228099782}
+  - component: {fileID: 65041548182955026}
+  m_Layer: 0
+  m_Name: Meat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4299951159579932
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1970260694950826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65041548182955026
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1970260694950826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.4, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114422805228099782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1970260694950826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c78491a8451368459ae57b20c76d062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 0
+  spawnRemained: 0
+  maxSpawns: 0
+  OnGatherScrapsVar: {fileID: 11400000, guid: a25cd1778f5ac734e80e0c3370bd5253, type: 2}
+  OnGatherFoodVar: {fileID: 11400000, guid: b5c3a9c4109205845849d34d924a4ccf, type: 2}
+  OnGatherScrapsEvent: {fileID: 11400000, guid: 0ef6a6e60e20c7641a0c8a1d172942a8,
+    type: 2}
+  OnGatherFoodEvent: {fileID: 11400000, guid: 2fd4fd461dfc8524ba4635e45506ff15, type: 2}
+  pickUpTextPrefab: {fileID: 1733373359469076, guid: 3ef6499c609af3e42b21ce5841fd618e,
+    type: 2}
+  SO_gm: {fileID: 11400000, guid: 2a4b58cdf6d764748a4241461663d2ee, type: 2}
+  risorsa: 1
+  clipScraps: {fileID: 11400000, guid: 39e6a9c55d76c6d4fbb888783c20dc85, type: 2}
+  clipMeat: {fileID: 11400000, guid: 6add57dceac6c6f42bedd61453627aeb, type: 2}
+  clipFuel: {fileID: 11400000, guid: 898c7f46009df154dbf0464d4235f2f8, type: 2}
+  tutorialEndEvent: {fileID: 11400000, guid: 27151728735f26b4da97cbef880cd32c, type: 2}
+  tutorialTrigger: {fileID: 11400000, guid: 7c4802cafe5482f45830a834899406f1, type: 2}
+--- !u!212 &212113527755424186
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1970260694950826}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e89f50e37411781418efdfa7e2194e8d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

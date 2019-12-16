@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9665976f4b2d24fadee84901422fa2, type: 3}
+  m_Name: Str_Mina
+  m_EditorClassIdentifier: 
+  buildingName: Mina
+  scrapsReq: 8
+  foodReq: 0
+  icon: {fileID: 21300002, guid: 47c930fee8674e7408c6598fd7dbd1d0, type: 3}
+  collider: {fileID: 136310437368061242, guid: 70f7138049cff4945aeb218992a23dfb, type: 2}
+  prefab: {fileID: 1826603465413138, guid: 70f7138049cff4945aeb218992a23dfb, type: 2}
+  buildingSound: {fileID: 8300000, guid: 260e317146dff954aa43c4b2b1983ce1, type: 3}
+  explosionDestruction: {fileID: 8300000, guid: 2ef9142101cae88479d8c33b782f8a33,
+    type: 3}
+  volumePiazzamento: 1
+  volumeDistruzione: 1
+  hp: 100
+  damageTimerInSec: 2
+  damage: 20

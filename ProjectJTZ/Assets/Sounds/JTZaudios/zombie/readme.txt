@@ -1,0 +1,2 @@
+-zombie1 e zombie2 sono suoni generici, magari randomizzati per ogni zombie.
+-colpito1 e colpito2      "             "            "            "

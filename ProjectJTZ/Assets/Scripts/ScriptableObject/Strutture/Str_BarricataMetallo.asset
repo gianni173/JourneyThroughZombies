@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9665976f4b2d24fadee84901422fa2, type: 3}
+  m_Name: Str_BarricataMetallo
+  m_EditorClassIdentifier: 
+  buildingName: BarricataMetallo
+  scrapsReq: 1
+  metalReq: 0
+  foodReq: 0
+  icon: {fileID: 21300000, guid: ac5afbd809692904e9dd0124cb172517, type: 3}
+  collider: {fileID: 65534656894499232, guid: aeb3abffbda247246b230faa6d419158, type: 2}
+  prefab: {fileID: 1028861023454642, guid: aeb3abffbda247246b230faa6d419158, type: 2}
+  buildingSound: {fileID: 8300000, guid: cb3e7c85d39db714d9b25d667f267c2a, type: 3}
+  explosionDestruction: {fileID: 8300000, guid: 0ed28ed09f58f90419d358cc57705356,
+    type: 3}
+  volumePiazzamento: 1
+  volumeDistruzione: 1
+  hp: 15
+  damageTimerInSec: 0
+  damage: 0

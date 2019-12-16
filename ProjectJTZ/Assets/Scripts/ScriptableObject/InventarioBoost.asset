@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfb19eedd7e4264cb00bd184fb65c56, type: 3}
+  m_Name: InventarioBoost
+  m_EditorClassIdentifier: 
+  ListaStruct: []
+  ListaBoosts:
+  - {fileID: 11400000, guid: 1b52bbe8961a6774b85ada392bdfb895, type: 2}
+  - {fileID: 11400000, guid: fb4720a126d370e4d9869334fbcd60b8, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b172d862a8e406489a6eae9a014b15c, type: 3}
+  m_Name: S_Passi
+  m_EditorClassIdentifier: 
+  Passi:
+  - {fileID: 8300000, guid: 96106fa5b7ca6aa4b8a01f55c1a2c31f, type: 3}
+  - {fileID: 8300000, guid: 05e5c000a07f25e4fa2c0ad354c9f8d7, type: 3}
+  - {fileID: 8300000, guid: 8f5ed5edf9e1047449d2907dd085e422, type: 3}
+  - {fileID: 8300000, guid: 4173d196546eeb14296983df7892d164, type: 3}
+  - {fileID: 8300000, guid: 5f7733adc7d07aa47a091fe32fc061d2, type: 3}
+  soundScale: 1

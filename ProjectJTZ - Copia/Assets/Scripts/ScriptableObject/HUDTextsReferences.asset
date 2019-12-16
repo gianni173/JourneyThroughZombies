@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa62da1674a89ac42b78c9fe693c9eef, type: 3}
+  m_Name: HUDTextsReferences
+  m_EditorClassIdentifier: 
+  woodReq: 0
+  metalReq: 0
+  medsReq: 0
+  erbsReq: 0
